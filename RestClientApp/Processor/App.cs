@@ -34,7 +34,7 @@ public static class App
 
         var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
         var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
-        return repositories!;
-    }
 
+        return repositories;
+    }
 }
